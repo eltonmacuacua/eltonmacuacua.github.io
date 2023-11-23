@@ -124,6 +124,3 @@ function gerarHoraLista2(horaAtualCentralizada, minutoAtual, segundoAtual) {
 
   return horaFormatada + ":" + minutoFormatado + ":" + segundoFormatado;
 }
-
-var btnAdicionar = document.getElementById("btnAdicionar");
-btnAdicionar.addEventListener("click", adicionarItem);
