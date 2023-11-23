@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIATOR-HACKER</title>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="AVIATOR-HACKER">
+    <meta property="og:description" content="App created with react. Our app is powered the.....">
+    <link rel="stylesheet" type="text/css" href="indexs.css">
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+    <div id="userInfo">
+        Bem-vindo, <span id="userName"></span>!
+    </div>
+
+    <div id="contentContainer" style="display: none;">
+        <!-- Barra de Atendimento ao Cliente -->
+        <div class="atendimento">
+            <a href="https://wa.me/258870313175" target="_blank">
+                <span>&#128100;</span> <!-- Ícone de suporte -->
+                Atendimento ao Cliente
+            </a>
+        </div>
+
+        <div class="form-select">
+            <p>Escolha a sua Casa de Apostas
+            <p>
+                <select>
+                    <option>elphant Bet</option>
+                    <option>888 Bet</option>
+                    <option>JOGA Bet</option>
+                    <option>OLÁ. Bet</option>
+                    <option>Bet way</option>
+                    <option>Bet ika</option>
+                    <option>Pla card</option>
+                </select>
+
+            <p>Selecione o Número de Previsões</p>
+            <select id="selectNumber">
+                <option value="20">20</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="80">80</option>
+            </select>
+
+            <div class="btn-math">
+                <button class="btn" type="button" id="btnAdicionar">Gerar</button>
+            </div>
+
+            <p style="text-align: center;">_____________Resultados da Busca_____________</p>
+            <ul id="lista2"></ul>
+
+            <p style="text-align: center;">________Conjunção de Dados Semanais________</p>
+            <ul id="lista1"></ul>
+
+            <!-- Botão de Logout -->
+            <button id="logoutBtn">Logout</button>
+        </div>
+
+        <!-- Importar o arquivo JavaScript -->
+        <script src="js/admin.js"></script>
+        <script src="js/script_dashboard.js"></script>
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>
