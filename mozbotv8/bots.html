@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIATOR-HACKER</title>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="AVIATOR-HACKER">
+    <meta property="og:description" content="App created with react. Our app is powered the.....">
+    <meta property="og:image" content="https://im.ge/i/PIl8kp">
+    <meta property="og:url" content="https://maind3kcjvj4ignt41amplifyapp.vercel.app/">
+    <link rel="stylesheet" type="text/css" href="indexs.css">
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+    <div id="userInfo">
+        Bem-vindo, <span id="userName"></span>!
+    </div>
+
+    <div id="contentContainer" style="display: none;">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hacker Screen</title>
+        <style>
+            body {
+                background-color: black;
+                color: lime;
+                font-family: "Courier New", monospace;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            #content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .button {
+                background-color: #00ff00;
+                color: black;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                font-family: "Courier New", monospace;
+                font-size: 16px;
+                margin: 10px;
+            }
+
+            #loading {
+                display: none;
+                color: yellow;
+            }
+        </style>
+
+        </head>
+
+        <body>
+            <div id="content">
+                <h1>Bot Winner V5</h1>
+                <button class="button" onclick="loadWinner()">Bot Winner V5</button>
+                <button class="button" onclick="generateSignal()">Generate Signal Bet</button>
+                <div id="loading">Loading...</div>
+            </div>
+
+            <script>
+                function loadWinner() {
+                    document.getElementById('loading').style.display = 'block';
+                    setTimeout(function () {
+                        window.location.href = 'winer.html';
+                    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+                }
+
+                function generateSignal() {
+                    document.getElementById('loading').style.display = 'block';
+                    setTimeout(function () {
+                        window.location.href = 'index.html';
+                    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+                }
+            </script>
+
+
+            <!-- Botão de Logout -->
+            <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- Importar o arquivo JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/script_dashboard.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+        // Adicione o código JavaScript aqui
+        // Obtenha uma referência para o botão de logout
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        // Adicione um ouvinte de evento de clique ao botão de logout
+        logoutBtn.addEventListener('click', () => {
+            // Realiza o logout do usuário usando o Firebase Authentication
+            firebase.auth().signOut()
+                .then(() => {
+                    // Logout bem-sucedido
+                    console.log('Usuário deslogado com sucesso');
+                    // Você pode redirecionar o usuário para a página de login ou executar outras ações aqui
+                })
+                .catch((error) => {
+                    // Ocorreu um erro durante o logout
+                    console.error('Erro ao fazer logout:', error);
+                });
+        });
+    </script>
+    </div>
+</body>
+
+</html>
