@@ -8,7 +8,7 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
-    import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 
     // Sua configuração do Firebase
     const firebaseConfig = {
@@ -25,12 +25,15 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
 
+    // Obter a instância do módulo de autenticação
+    const auth = getAuth(app);
+
     // Função para criar uma nova conta de usuário
     function criarConta() {
       var email = document.getElementById('email').value;
       var senha = document.getElementById('senha').value;
 
-      createUserWithEmailAndPassword(app.auth(), email, senha)
+      createUserWithEmailAndPassword(auth, email, senha)
         .then((userCredential) => {
           // Usuário criado com sucesso
           const user = userCredential.user;
@@ -43,9 +46,6 @@
           console.error('Erro ao criar usuário:', errorCode, errorMessage);
         });
     }
-
-    // Defina a função criarConta como uma propriedade global do objeto window
-    window.criarConta = criarConta;
   </script>
 </head>
 <body>
