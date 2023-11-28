@@ -43,6 +43,9 @@
           console.error('Erro ao criar usuário:', errorCode, errorMessage);
         });
     }
+
+    // Defina a função criarConta como uma propriedade global do objeto window
+    window.criarConta = criarConta;
   </script>
 </head>
 <body>
