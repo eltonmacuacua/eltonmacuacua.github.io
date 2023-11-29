@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Página</title>
+</head>
+<body>
+  <h2>Informações do Usuário</h2>
+
+  <div id="userInfo">
+    <!-- As informações do usuário serão exibidas aqui -->
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+    // Sua configuração do Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCnzpJzr0h5U5J4f3ceMj3SEgYGmmdZF-c",
+      authDomain: "aviator-indicador.firebaseapp.com",
+      projectId: "aviator-indicador",
+      storageBucket: "aviator-indicador.appspot.com",
+      messagingSenderId: "451853932614",
+      appId: "1:451853932614:web:9d59a54631e4200364d247",
+      measurementId: "G-8HPSJWWKGS"
+    };
+
+    // Inicializar o Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // Obter a instância do módulo de autenticação
+    const auth = getAuth(app);
+
+    // Obter o ID do usuário da sessionStorage
+    const userId = sessionStorage.getItem("user_id");
+
+    // Verificar se há um ID de usuário
+    if (userId && auth.currentUser) {
+      const userInfoDiv = document.getElementById('userInfo');
+
+      // Obter mais informações do usuário, se disponíveis
+      const userName = auth.currentUser.displayName || "Nome de Usuário";
+      const userEmail = auth.currentUser.email || "E-mail de Usuário";
+
+      userInfoDiv.innerHTML = `
+        <p>ID: ${userId}</p>
+        <p>Nome: ${userName}</p>
+        <p>E-mail: ${userEmail}</p>
+      `;
+    } else {
+      // Se não houver ID de usuário ou o usuário não estiver autenticado, redirecionar para a página de login
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

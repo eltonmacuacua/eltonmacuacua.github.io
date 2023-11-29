@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Usuário</title>
+  <title>Login</title>
   <!-- Importe as funções necessárias do SDK do Firebase -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
-    import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 
     // Sua configuração do Firebase
     const firebaseConfig = {
@@ -28,52 +28,42 @@
     // Obter a instância do módulo de autenticação
     const auth = getAuth(app);
 
-    // Função para criar uma nova conta de usuário
-    function criarConta() {
-      var nome = document.getElementById('nome').value;
+    // Função para realizar o login
+    function realizarLogin() {
       var email = document.getElementById('email').value;
       var senha = document.getElementById('senha').value;
 
-      createUserWithEmailAndPassword(auth, email, senha)
+      signInWithEmailAndPassword(auth, email, senha)
         .then((userCredential) => {
-          // Usuário criado com sucesso
+          // Login bem-sucedido
           const user = userCredential.user;
-
-          // Atualizar o perfil do usuário com o nome
-          return updateProfile(user, {
-            displayName: nome
-          });
-        })
-        .then(() => {
-          console.log('Perfil do usuário atualizado com sucesso:', auth.currentUser);
+          console.log('Login bem-sucedido:', user);
+          // Aqui você pode redirecionar o usuário para a página desejada após o login
         })
         .catch((error) => {
           // Tratar erros
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.error('Erro ao criar usuário:', errorCode, errorMessage);
+          console.error('Erro ao fazer login:', errorCode, errorMessage);
         });
     }
 
     // Adicionar um ouvinte de evento de clique ao botão
     document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('btnCadastrar').addEventListener('click', criarConta);
+      document.getElementById('btnLogin').addEventListener('click', realizarLogin);
     });
   </script>
 </head>
 <body>
-  <h2>Cadastro de Usuário</h2>
+  <h2>Login</h2>
   <form>
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" required>
-
     <label for="email">E-mail:</label>
     <input type="email" id="email" required>
 
     <label for="senha">Senha:</label>
     <input type="password" id="senha" required>
 
-    <button type="button" id="btnCadastrar">Cadastrar</button>
+    <button type="button" id="btnLogin">Entrar</button>
   </form>
 </body>
 </html>
