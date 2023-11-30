@@ -45,7 +45,20 @@
           });
         })
         .then(() => {
-          console.log('Perfil do usuário atualizado com sucesso:', auth.currentUser);
+          // Dados do usuário
+          const usuario = {
+            uid: auth.currentUser.uid,
+            nome: auth.currentUser.displayName,
+            email: auth.currentUser.email,
+            password: auth.currentUser.password,
+          };
+
+          alert('Conta criada com sucesso!');
+
+          // Limpar campos de inserção de texto
+          document.getElementById('nome').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('senha').value = '';
         })
         .catch((error) => {
           // Tratar erros
@@ -75,5 +88,6 @@
 
     <button type="button" id="btnCadastrar">Cadastrar</button>
   </form>
+
 </body>
 </html>
