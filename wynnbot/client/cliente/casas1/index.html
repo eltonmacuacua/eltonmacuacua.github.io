@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIATOR-HACKER</title>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="AVIATOR-HACKER">
+    <meta property="og:description" content="App created with react. Our app is powered the.....">
+    <link rel="stylesheet" type="text/css" href="css/indexs.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="../../js/validaLogin.js"></script>
+	<script src="../../js/bloqueia.js"></script>
+</head>
+
+<body>
+    <script src="js/casaAposta.js"> </script>
+
+    <div id="userInfo" style="display: none;">
+        Bem-vindo, <span id="userName"></span>!
+    </div>
+    <header class="top-header">
+    </header>
+
+
+    <!--dust particel-->
+    <div>
+        <div class="starsec"></div>
+        <div class="starthird"></div>
+        <div class="starfourth"></div>
+        <div class="starfifth"></div>
+    </div>
+    <!--Dust particle end--->
+
+    <div id="contentContainer" style="display: none;">
+        
+    
+    <h1 class="message__title">
+        <span id="resultado"></span>
+    </h1>
+
+        <p id="hora-atual" style="position: fixed; top: 0; left: 0;"></p>
+        <p id="data-atual" style="display: none;"></p>
+
+        <div class="form-select">
+            <p>Escolha a quantidade de Previsões acertadas no dia
+                <b id="uma-semana-atras"></b>
+                (<b id="dia-semana"></b>):
+            </p>
+            <select id="selectNumber">
+                <option value="12">12</option>
+                <option value="20">20</option>
+                <option value="40">40</option>
+            </select>
+
+            <div class="btn-math">
+                <button class="btn" type="button" id="btnAdicionar">Gerar próxima previsão</button>
+            </div>
+
+            <h2 style="text-align: center;">Próxima chance (roxo):</h2>
+            <ul id="lista2"></ul>
+
+            <h2 style="text-align: center;">Resultados de uma semana atrás:</h2>
+            <ul id="lista1"></ul>
+
+        </div>
+
+        <!-- Importar o arquivo JavaScript -->
+        <script src="js/admin.js"></script>
+        <script src="js/script_dashboard.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/horaActual.js"></script>
+
+
+    </div>
+</body>
+
+</html>
