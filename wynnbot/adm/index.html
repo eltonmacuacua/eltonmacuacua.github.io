@@ -15,14 +15,14 @@
 
     // Sua configuração do Firebase
     const firebaseConfig = {
-      apiKey: "AIzaSyCnzpJzr0h5U5J4f3ceMj3SEgYGmmdZF-c",
-      authDomain: "aviator-indicador.firebaseapp.com",
-      projectId: "aviator-indicador",
-      storageBucket: "aviator-indicador.appspot.com",
-      messagingSenderId: "451853932614",
-      appId: "1:451853932614:web:9d59a54631e4200364d247",
-      measurementId: "G-8HPSJWWKGS"
-    };
+      apiKey: "AIzaSyCVOMwYEbdCvh3prO7DHP4zoEJKAqPlmtU",
+      authDomain: "wynn-bot.firebaseapp.com",
+      projectId: "wynn-bot",
+      storageBucket: "wynn-bot.appspot.com",
+      messagingSenderId: "858424350893",
+      appId: "1:858424350893:web:26af73abdf44091406ce24",
+      measurementId: "G-ZX0NJXJ2MP"
+    };  
 
     // Inicializar o Firebase
     const app = initializeApp(firebaseConfig);
@@ -47,7 +47,7 @@
           sessionStorage.setItem("user_nome", user.displayName || ''); // Substitua pelo nome real do usuário
 
           // Redirecionar o usuário para a página desejada após o login
-          window.location.href = './cliente/';
+          window.location.href = './adm/';
         })
         .catch((error) => {
           // Tratar erros
@@ -100,21 +100,8 @@
       <p id="error" style="display: none; color: red;"></p> <!-- Para exibir mensagens de erro -->
 
 
-      Precida de ajuda? <br>
-      <!--
-        <a href="https://chat.whatsapp.com/ETQwz3glAGfJoQTTrIXmT4"
-      target="_blank">Grupo no WhatsApp!</a>
-
-      <br> 
-    -->
-      <br>
-
       <a href="https://wa.me/258870313175?text=Sauda%C3%A7%C3%B5es%2C%20preciso%20de%20suporte%20no%20bot%20WYNN%20BOT"
-        target="_blank">Assistente 1</a>
-      <a href="https://wa.me/258855105437?text=Sauda%C3%A7%C3%B5es%2C%20preciso%20de%20suporte%20no%20bot%20WYNN%20BOT"
-        target="_blank">Assistente 2</a>
-        <br>        
-      
+        target="_blank">Precida de ajuda?</a>
 
     </form>
 
