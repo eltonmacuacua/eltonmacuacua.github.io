@@ -66,6 +66,46 @@
     });
   </script>
 
+  <!-- Inclua a biblioteca FontAwesome via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    /* Estilo para os botões */
+    button {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #25D366;
+      /* Cor verde do WhatsApp */
+      color: #fff;
+      /* Cor do texto branco */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Estilo quando o mouse passa sobre o botão */
+    button:hover {
+      background-color: #128C7E;
+      /* Cor verde mais escura do WhatsApp */
+    }
+
+    /* Estilo para o ícone dentro do botão */
+    button i {
+      margin-right: 5px;
+    }
+
+    .grupo{      
+      width: 23%;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      color: #fff
+    }
+  </style>
+
 </head>
 
 <body>
@@ -101,20 +141,26 @@
 
 
       Precida de ajuda? <br>
-      <!--
-        <a href="https://chat.whatsapp.com/ETQwz3glAGfJoQTTrIXmT4"
-      target="_blank">Grupo no WhatsApp!</a>
+        
+
+      <button class="grupo"
+        onclick="window.open('https://chat.whatsapp.com/CTLVq3aPMCaDHXMPhsaeue', '_blank')">
+        <i class="fab fa-whatsapp"></i> Aceda ao grupo oficial
+      </button>
 
       <br> 
-    -->
+      <br>
+      <button
+        onclick="window.open('https://wa.me/258870313175?text=Sauda%C3%A7%C3%B5es%2C%20preciso%20de%20suporte%20no%20bot%20WYNN%20BOT', '_blank')">
+        <i class="fab fa-whatsapp"></i> Assistente 1
+      </button>
+
+      <button
+        onclick="window.open('https://wa.me/258855105437?text=Sauda%C3%A7%C3%B5es%2C%20preciso%20de%20suporte%20no%20bot%20WYNN%20BOT', '_blank')">
+        <i class="fab fa-whatsapp"></i> Assistente 2
+      </button>
       <br>
 
-      <a href="https://wa.me/258870313175?text=Sauda%C3%A7%C3%B5es%2C%20preciso%20de%20suporte%20no%20bot%20WYNN%20BOT"
-        target="_blank">Assistente 1</a>
-      <a href="https://wa.me/258855105437?text=Sauda%C3%A7%C3%B5es%2C%20preciso%20de%20suporte%20no%20bot%20WYNN%20BOT"
-        target="_blank">Assistente 2</a>
-        <br>        
-      
 
     </form>
 
