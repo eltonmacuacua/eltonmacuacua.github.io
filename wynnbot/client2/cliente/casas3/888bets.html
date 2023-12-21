@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #red-light {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css.css">
+	<script src="../js/validaLogin.js"></script>
+    <script src="../js/bloqueia.js"></script>
+	
+</head>
+
+<body>
+
+    <header class="top-header">
+    </header>
+
+    <div id="top-bar">
+        <div class="container-lampada">
+            <div id="red-light" onclick="adicionarItem()"></div>
+            <span style="color: black;" class="purple-text">Possível <i id="dynamicText">Prevendo...</i></span>
+        </div>
+
+        <div id="info-line">
+            <span>Rosa: <i id="lista2">Prevendo...</i></span>
+            <span>Gráfico: <i id="marketState">Prevendo...</i></span>
+            <span>Agora: <i id="clock">13:01:09</i></span>
+        </div>
+    </div>
+    
+    <iframe src="https://888bets.co.mz/pt/games/detail/casino/normal/7787"></iframe>
+
+    <script src="js/winer.js"></script>
+    <script>
+        function mudaCor() {
+            var marketStateElement = document.getElementById('marketState');
+            var redLightElement = document.getElementById('red-light');
+
+            setInterval(function () {
+                // Obter o valor do marketState como número
+                var marketStateValue = parseFloat(marketStateElement.textContent);
+
+                // Verificar se o marketState é maior que 50%
+                if (marketStateValue > 50) {
+                    // Se sim, mudar a cor para verde
+                    redLightElement.style.backgroundColor = 'green';
+                } else {
+                    // Se não, mudar a cor para vermelha
+                    redLightElement.style.backgroundColor = 'red';
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

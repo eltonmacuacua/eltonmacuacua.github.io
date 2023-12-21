@@ -504,7 +504,7 @@ section {
   opacity: 0.5;
   filter: blur(5px);
   background-size: cover;
-  transition: background 1s ease; /* Adiciona a transição de 1 segundo */
+  transition: background 2s ease; /* Adiciona a transição de 1 segundo */
 
   /* Defina o background inicial */
   background: url(../img/aviator.webp) center no-repeat;
