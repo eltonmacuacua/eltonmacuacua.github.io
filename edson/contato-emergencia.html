@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos de Emergência</title>
+    <link rel="stylesheet" href="contato-emergencia.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contatos de Emergência</h2>
+            <div id="contatos-list"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var contatosListElement = document.getElementById('contatos-list');
+
+            // Contatos de emergência pré-definidos
+            var contatosEmergencia = [
+                { nome: 'Polícia', telefone: '119' },
+                { nome: 'Bombeiros', telefone: '198' },
+                { nome: 'Assistência Médica', telefone: '+258 21 325 422' },
+            ];
+
+            // Criar elementos HTML para cada contato
+            contatosEmergencia.forEach(function(contato) {
+                var contatoElement = document.createElement('div');
+                contatoElement.classList.add('contato-card');
+
+                var nomeElement = document.createElement('h3');
+                nomeElement.textContent = contato.nome;
+                contatoElement.appendChild(nomeElement);
+
+                var telefoneElement = document.createElement('a');
+                telefoneElement.href = 'tel:' + contato.telefone;
+                telefoneElement.textContent = 'Telefone: ' + contato.telefone;
+                contatoElement.appendChild(telefoneElement);
+
+                contatosListElement.appendChild(contatoElement);
+            });
+        });
+    </script>
+</body>
+</html>

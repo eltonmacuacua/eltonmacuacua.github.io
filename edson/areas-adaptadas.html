@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas Adaptadas</title>
+    <link rel="stylesheet" href="areas-adaptadas.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Áreas Adaptadas</h2>
+            <a href="adicionar-area.html" class="btn">Adicionar Nova Área</a>
+            <div id="areas-list"></div>
+        </section>
+    </main>
+
+    <!-- Incluir o Firebase SDK diretamente -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- Incluir seu arquivo de configuração do Firebase -->
+    <script src="firebase-config.js"></script>
+    <!-- Incluir seu arquivo de JavaScript principal -->
+    <script src="app.js"></script>
+    <script>
+        var logoutLink = document.getElementById('logout-link');
+        if (logoutLink) {
+            logoutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                logoutUser();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var areasListElement = document.getElementById('areas-list');
+
+            firestore.collection('areas-adaptadas').get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    var areaData = doc.data();
+                    var areaElement = document.createElement('div');
+                    areaElement.classList.add('area-card');
+
+                    var nomeElement = document.createElement('h3');
+                    nomeElement.textContent = areaData.nome;
+                    areaElement.appendChild(nomeElement);
+
+                    var beneficiariosElement = document.createElement('p');
+                    beneficiariosElement.textContent = 'Beneficiários: ' + areaData.beneficiarios;
+                    areaElement.appendChild(beneficiariosElement);
+
+                    var linkElement = document.createElement('a');
+                    linkElement.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(areaData.localizacao);
+                    linkElement.target = '_blank';
+                    linkElement.textContent = 'Ver no Google Maps';
+                    areaElement.appendChild(linkElement);
+
+                    areasListElement.appendChild(areaElement);
+                });
+            }).catch(function(error) {
+                console.error('Erro ao obter áreas adaptadas:', error);
+            });
+        });
+    </script>
+</body>
+</html>
