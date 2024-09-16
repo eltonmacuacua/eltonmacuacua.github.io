@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Submetidos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: right;
+        }
+        header img {
+            width: 150px;
+        }
+        h2 {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        button {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../logo.png" alt="Access Logo">
+        </header>
+        <h2>Dados Submetidos</h2>
+        <p><strong>Eu,</strong> <span id="nome"></span></p>
+        <p><strong>Portador do documento de identificação nº:</strong> <span id="id_numero"></span></p>
+        <p><strong>De nacionalidade:</strong> <span id="nacionalidade"></span></p>
+        <p><strong>Residente no endereço:</strong> <span id="endereco"></span></p>
+        <p><strong>Origem dos fundos:</strong> <span id="origem_fundos"></span></p>
+
+        <h2>Relação de Contas Abertas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Número de Conta</th>
+                    <th>Propósito da Conta</th>
+                    <th>Valor Transacional Expectável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="numero_conta1"></td>
+                    <td id="proposito_conta1"></td>
+                    <td id="valor_transacional1"></td>
+                </tr>
+                <tr>
+                    <td id="numero_conta2"></td>
+                    <td id="proposito_conta2"></td>
+                    <td id="valor_transacional2"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button onclick="gerarPDF()">Gerar PDF</button>
+    </div>
+
+    <!-- Inclusão da biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Inclusão do plugin jsPDF-AutoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <script>
+        // Carregar os dados do URL e preencher os campos
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('nome').textContent = params.get('nome');
+        document.getElementById('id_numero').textContent = params.get('id_numero');
+        document.getElementById('nacionalidade').textContent = params.get('nacionalidade');
+        document.getElementById('endereco').textContent = params.get('endereco');
+        document.getElementById('origem_fundos').textContent = params.get('origem_fundos');
+
+        document.getElementById('numero_conta1').textContent = params.get('numero_conta1');
+        document.getElementById('proposito_conta1').textContent = params.get('proposito_conta1');
+        document.getElementById('valor_transacional1').textContent = params.get('valor_transacional1');
+
+        document.getElementById('numero_conta2').textContent = params.get('numero_conta2');
+        document.getElementById('proposito_conta2').textContent = params.get('proposito_conta2');
+        document.getElementById('valor_transacional2').textContent = params.get('valor_transacional2');
+
+        // Função para gerar PDF usando jsPDF com AutoTable
+        function gerarPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Adicionar título e logo
+            doc.setFontSize(18);
+            doc.text("Auto Declaração de Origem de Fundos", 10, 10);
+            doc.addImage("../logo.png", "PNG", 150, 5, 40, 20); // Se o logo não aparecer, forneça o URL correto ou adicione diretamente em base64.
+
+            // Adicionar conteúdo
+            doc.setFontSize(12);
+            doc.text("Eu, " + params.get('nome'), 10, 40);
+            doc.text("Portador do documento de identificação nº: " + params.get('id_numero'), 10, 50);
+            doc.text("De nacionalidade: " + params.get('nacionalidade'), 10, 60);
+            doc.text("Residente no endereço: " + params.get('endereco'), 10, 70);
+            doc.text("Origem dos fundos: " + params.get('origem_fundos'), 10, 80);
+
+            // Adicionar tabela de contas abertas
+            doc.text("Relação de Contas Abertas", 10, 100);
+
+            doc.autoTable({
+                startY: 110,
+                head: [['Número de Conta', 'Propósito da Conta', 'Valor Transacional']],
+                body: [
+                    [params.get('numero_conta1'), params.get('proposito_conta1'), params.get('valor_transacional1')],
+                    [params.get('numero_conta2'), params.get('proposito_conta2'), params.get('valor_transacional2')],
+                ],
+            });
+
+            // Campos de assinatura e datas (conforme a imagem fornecida)
+            const startY = doc.autoTable.previous.finalY + 20;
+
+            doc.setFontSize(9);
+            doc.setTextColor(255, 255, 255);
+            doc.setFillColor(0, 51, 102);
+            doc.rect(10, startY, 87, 10, 'F'); // Assinatura
+            doc.rect(100, startY, 95, 10, 'F'); // Somente para uso interno
+
+            doc.setTextColor(0, 0, 0);
+            doc.text('ASSINATURA DO CLIENTE / CUSTOMER\'S SIGNATURE', 12, startY + 7);
+            doc.text('SOMENTE PARA USO INTERNO / FOR INTERNAL USE ONLY', 102, startY + 7);
+
+            doc.setFontSize(9);
+            doc.text('Data / Date', 12, startY + 25);
+            doc.text('Data / Date', 102, startY + 25);
+
+            doc.rect(10, startY + 30, 60, 10); // Campo de data cliente
+            doc.rect(100, startY + 30, 60, 10); // Campo de data interno
+
+            // Conferred and Authorized sections
+            doc.text('Conferido / Conferred', 102, startY + 15);
+            doc.text('Autorizado / Authorized', 162, startY + 15);
+
+            // Footer note
+            doc.setFontSize(8);
+            doc.text('¹Mencionar a real actividade do cliente e fazer uma descrição resumida e clara do negócio por forma a justificar as transacções a posterior.', 10, startY + 50);
+            doc.text('¹Mention the actual customer activity and give a brief and clear description of the business to justify subsequent transactions.', 10, startY + 55);
+
+            // Gerar e salvar o PDF
+            doc.save('auto_declaracao.pdf');
+        }
+    </script>
+</body>
+</html>

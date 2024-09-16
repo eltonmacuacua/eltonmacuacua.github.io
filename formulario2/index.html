@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Auto Declaração</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: right;
+        }
+        header img {
+            width: 150px;
+        }
+        h2 {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        form div {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 60%;
+            padding: 8px;
+            margin-left: 10px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        input[type="submit"] {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../logo.png" alt="Access Logo">
+        </header>
+        <h2>Auto Declaração de Origem de Fundos / Self Declaration of Origin of Funds</h2>
+        <form action="dados.html" method="get">
+            <div>
+                <label for="nome">Eu,</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label for="id_numero">Portador do documento de identificação nº</label>
+                <input type="text" id="id_numero" name="id_numero" required>
+            </div>
+            <div>
+                <label for="nacionalidade">De nacionalidade</label>
+                <input type="text" id="nacionalidade" name="nacionalidade" required>
+            </div>
+            <div>
+                <label for="endereco">Residente no endereço</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div>
+                <label for="origem_fundos">Origem dos fundos</label>
+                <input type="text" id="origem_fundos" name="origem_fundos" required>
+            </div>
+            <h2>Relação de Contas Abertas / List of Open Accounts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de Conta/Account Number</th>
+                        <th>Propósito da Conta/Account Purpose</th>
+                        <th>Valor Transacional Expectável/Expected Transactional Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="numero_conta1" required></td>
+                        <td><input type="text" name="proposito_conta1" required></td>
+                        <td><input type="number" name="valor_transacional1" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="numero_conta2"></td>
+                        <td><input type="text" name="proposito_conta2"></td>
+                        <td><input type="number" name="valor_transacional2"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <input type="submit" value="Submeter">
+        </form>
+    </div>
+</body>
+</html>
