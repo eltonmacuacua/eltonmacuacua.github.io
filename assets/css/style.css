@@ -1921,3 +1921,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+.tech-logo {
+  width: 80px; /* Largura fixa */
+  height: 80px; /* Altura fixa */
+  object-fit: contain; /* Mantém a proporção da imagem */
+}
