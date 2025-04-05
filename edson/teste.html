@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal Bar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .diagonal-bar {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 20px;
+            /* largura da faixa diagonal */
+            height: 100%;
+            /* altura da faixa diagonal */
+            background-color: #ff0000;
+            /* cor da faixa diagonal */
+            transform-origin: bottom left;
+            transform: rotate(-45deg);
+            /* girar a faixa para formar a diagonal */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="diagonal-bar"></div>
+
+    <h1>Seu conteúdo aqui...</h1>
+</body>
+
+</html>
