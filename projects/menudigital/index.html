@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    .hero-section {
+      background-image: url('assets/img/background/bg1.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 45vh;
+      position: relative;
+    }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+    }
+    .category-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-card {
+      transition: transform 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Seção Hero com Imagem de Fundo -->
+  <div class="hero-section">
+    <div class="hero-overlay h-full w-full flex flex-col justify-between p-6">
+      <!-- Cabeçalho -->
+      <div class="flex justify-between items-start">
+        <div>
+          <p class="text-white text-opacity-90 text-sm">Sua localização <i class="fas fa-chevron-down ml-1"></i></p>
+          <p class="text-white font-bold text-lg">Mavalane, Maputo</p>
+        </div>
+        <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+          <a href="notificacoes.html"> <i class="fas fa-bell text-white"></i> </a>
+        </div>
+      </div>
+      
+      <!-- Título Principal -->
+      <div class="mb-8">
+        <h1 class="text-white text-3xl font-bold leading-tight">Provendo o melhor para ti</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categorias -->
+  <section class="px-4 -mt-10">
+    <div class="bg-white rounded-xl shadow-lg p-5"  style="margin-top: 3rem;">
+      <div class="flex justify-between items-center">
+        <h2 class="text-lg font-bold">Encontre sua categoria</h2>
+        <a href="#" class="text-orange-500 text-sm font-medium">Mais</a>
+      </div>
+      
+      <div class="flex justify-between mt-4">
+        <!-- Categoria 1 -->
+        <div class="flex flex-col items-center">
+          <div class="category-icon bg-orange-500 text-white rounded-full">
+            <i class="fas fa-hamburger text-xl"></i>
+          </div>
+          <p class="mt-2 text-sm font-medium">Burger</p>
+        </div>
+        
+        <!-- Categoria 2 -->
+        <div class="flex flex-col items-center">
+          <div class="category-icon bg-gray-100 text-gray-700 rounded-full">
+            <i class="fas fa-coffee text-xl"></i>
+          </div>
+          <p class="mt-2 text-sm font-medium">Bebidas</p>
+        </div>
+        
+        <!-- Categoria 3 -->
+        <div class="flex flex-col items-center">
+          <div class="category-icon bg-gray-100 text-gray-700 rounded-full">
+            <i class="fas fa-pizza-slice text-xl"></i>
+          </div>
+          <p class="mt-2 text-sm font-medium">Pizza</p>
+        </div>
+        
+        <!-- Categoria 4 -->
+        <div class="flex flex-col items-center">
+          <div class="category-icon bg-gray-100 text-gray-700 rounded-full">
+            <i class="fas fa-ice-cream text-xl"></i>
+          </div>
+          <p class="mt-2 text-sm font-medium">Sobremesas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section class="p-4 mt-4 mb-20">
+    <h2 class="text-lg font-bold mb-4">Destaques</h2>
+    
+    <div class="grid grid-cols-2 gap-4">
+      <!-- Produto 1 -->
+      <div class="product-card bg-white rounded-lg shadow-md overflow-hidden relative">
+        <img src="assets/img/burger/burger1.jpg" alt="Burger com carne" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="font-bold">Burger With Meat</h3>
+          <div class="flex items-center justify-between mt-2 text-sm text-gray-600">
+            <span class="flex items-center">
+              <i class="fas fa-star text-yellow-400 mr-1"></i> 4.9
+            </span>
+            <span class="flex items-center">
+              <i class="fas fa-map-marker-alt text-gray-400 mr-1"></i> 190m
+            </span>
+          </div>
+          <p class="text-orange-500 font-bold mt-2">Mt 17,230</p>
+        </div>
+      </div>
+      
+      <!-- Produto 2 -->
+      <div class="product-card bg-white rounded-lg shadow-md overflow-hidden relative">
+        <img src="assets/img/burger/burger2.jpg" alt="Cheese Burger" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="font-bold">Cheese Burger</h3>
+          <div class="flex items-center justify-between mt-2 text-sm text-gray-600">
+            <span class="flex items-center">
+              <i class="fas fa-star text-yellow-400 mr-1"></i> 4.9
+            </span>
+            <span class="flex items-center">
+              <i class="fas fa-map-marker-alt text-gray-400 mr-1"></i> 190m
+            </span>
+          </div>
+          <p class="text-orange-500 font-bold mt-2">Mt 17,230</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Inferior -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200">
+    <div class="flex justify-around py-3">
+      <a href="#" class="flex flex-col items-center text-orange-500">
+        <i class="fas fa-home text-lg"></i>
+        <span class="text-xs mt-1">Início</span>
+      </a>
+      <a href="#" class="flex flex-col items-center text-gray-500">
+        <i class="fas fa-search text-lg"></i>
+        <span class="text-xs mt-1">Buscar</span>
+      </a>
+      <a href="#" class="flex flex-col items-center text-gray-500">
+        <i class="fas fa-shopping-cart text-lg"></i>
+        <span class="text-xs mt-1">Pedidos</span>
+      </a>
+      <a href="#" class="flex flex-col items-center text-gray-500">
+        <i class="fas fa-user text-lg"></i>
+        <span class="text-xs mt-1">Conta</span>
+      </a>
+    </div>
+  </nav>
+</body>
+</html>

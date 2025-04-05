@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .notification-dot {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .notification-icon {
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Cabeçalho de Notificações -->
+    <header class="bg-white shadow-sm p-4 flex items-center">
+        <a href="index.html" class="mr-4">
+            <i class="fas fa-arrow-left text-gray-700"></i>
+        </a>
+        <h1 class="text-lg font-bold">Notificações</h1>
+    </header>
+
+    <!-- Conteúdo das Notificações -->
+    <div class="p-4">
+        <!-- Seção de Hoje -->
+        <h2 class="text-gray-500 font-medium mb-3">Hoje</h2>
+        
+        <!-- Notificação 1: Desconto Especial -->
+        <div class="bg-white shadow-sm rounded-lg p-4 mb-3 flex items-center">
+            <div class="notification-icon mr-4">
+                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-tags text-red-500"></i>
+                    <span class="notification-dot bg-red-500"></span>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Desconto Especial de 30%!</h3>
+                <p class="text-gray-500 text-sm">Promoção especial válida apenas hoje</p>
+            </div>
+        </div>
+
+        <!-- Notificação 2: Pedido Pego pelo Motorista -->
+        <div class="bg-white shadow-sm rounded-lg p-4 mb-3 flex items-center">
+            <div class="notification-icon mr-4">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-truck text-green-500"></i>
+                    <span class="notification-dot bg-green-500"></span>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Seu Pedido Foi Pego pelo Motorista</h3>
+            </div>
+        </div>
+
+        <!-- Notificação 3: Pedido Cancelado -->
+        <div class="bg-white shadow-sm rounded-lg p-4 mb-3 flex items-center">
+            <div class="notification-icon mr-4">
+                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-times text-red-500"></i>
+                    <span class="notification-dot bg-red-500"></span>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Seu Pedido Foi Cancelado</h3>
+                <p class="text-gray-500 text-sm">19 Jun 2023</p>
+            </div>
+        </div>
+
+        <!-- Seção de Ontem -->
+        <h2 class="text-gray-500 font-medium mb-3 mt-6">Ontem</h2>
+        
+        <!-- Notificação 4: Desconto 35% -->
+        <div class="bg-white shadow-sm rounded-lg p-4 mb-3 flex items-center">
+            <div class="notification-icon mr-4">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-envelope text-blue-500"></i>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Desconto Especial de 35%!</h3>
+                <p class="text-gray-500 text-sm">Promoção especial válida apenas hoje</p>
+            </div>
+        </div>
+
+        <!-- Notificação 5: Conta Configurada -->
+        <div class="bg-white shadow-sm rounded-lg p-4 mb-3 flex items-center">
+            <div class="notification-icon mr-4">
+                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-user text-purple-500"></i>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Configuração de Conta Concluída!</h3>
+                <p class="text-gray-500 text-sm">Promoção especial de configuração de conta</p>
+            </div>
+        </div>
+
+        <!-- Notificação 6: Oferta Especial -->
+        <div class="bg-white shadow-sm rounded-lg p-4 mb-3 flex items-center">
+            <div class="notification-icon mr-4">
+                <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-tag text-orange-500"></i>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Oferta Especial! 60% de Desconto</h3>
+                <p class="text-gray-500 text-sm">Oferta especial para nova conta, válida até 20 Nov 2022</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
