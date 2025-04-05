@@ -2,679 +2,1410 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elton Macuacua</title>
-
-    <style>
-        @charset "UTF-8";
-
-        /***********************************
-			/* 1. BODY */
-        /***********************************/
-
-        * {
-            margin: 0;
-            padding: 0;
-            -webkit-text-size-adjust: none;
-        }
-
-        html,
-        body {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        body {
-            padding: 0;
-            margin: 0;
-            background: #181828;
-            font-size: 14px;
-            line-height: 1;
-        }
-
-        label {
-            cursor: pointer;
-        }
-
-        a {
-            margin: 0;
-            padding: 0;
-            vertical-align: baseline;
-            background: transparent;
-            text-decoration: none;
-            color: #000;
-        }
-
-        input,
-        select,
-        button,
-        textarea {
-            margin: 0;
-            font-size: 100%;
-        }
-
-        html,
-        div,
-        span,
-        applet,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        a,
-        abbr,
-        acronym,
-        address,
-        big,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        font,
-        img,
-        ins,
-        kbd,
-        q,
-        s,
-        samp,
-        small,
-        strike,
-        strong,
-        sub,
-        sup,
-        tt,
-        var,
-        b,
-        u,
-        i,
-        center,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legFIM,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        input {
-            border: 0;
-            outline: 0;
-            font-size: 100%;
-            vertical-align: baseline;
-            background: transparent;
-        }
-
-
-        .top-header:before {
-            background-image: url(https://1.bp.blogspot.com/-gxsOcYWghHA/Xp_izTh4sFI/AAAAAAAAU8s/y637Fwg99qAuzW9na_NT_uApny8Vce95gCEwYBhgL/s1600/header-footer-gradient-bg.png);
-        }
-
-        .top-header:before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 4px;
-            background-repeat: repeat-x;
-            background-size: contain;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0.5;
-        }
-
-
-        .starsec {
-            content: " ";
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: transparent;
-            box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-            animation: animStar 150s linear infinite;
-        }
-
-        .starthird {
-            content: " ";
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: transparent;
-            box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-            animation: animStar 10s linear infinite;
-        }
-
-        .starfourth {
-            content: " ";
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: transparent;
-            box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-            animation: animStar 50s linear infinite;
-        }
-
-        .starfifth {
-            content: " ";
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            background: transparent;
-            box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
-            animation: animStar 80s linear infinite;
-        }
-
-        @keyframes animStar {
-            0% {
-                transform: translateY(0px);
-            }
-
-            100% {
-                transform: translateY(-2000px);
-            }
-        }
-
-
-
-        button {
-            border: none;
-            padding: 0;
-            font-size: 0;
-            line-height: 0;
-            background: none;
-            cursor: pointer;
-        }
-
-        :focus {
-            outline: 0;
-        }
-
-        .clearfix:before,
-        .clearfix:after {
-            content: "\0020";
-            display: block;
-            height: 0;
-            visibility: hidden;
-        }
-
-        .clearfix:after {
-            clear: both;
-        }
-
-        .clearfix {
-            zoom: 1;
-        }
-
-        /* 1. FIM BODY */
-        /***********************************/
-
-        /***********************************
-			/* 2. CONTENT */
-        /***********************************/
-        /* 2.1. Section error */
-        .error {
-            min-height: 100vh;
-            position: relative;
-            padding: 240px 0;
-            box-sizing: border-box;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            margin-top: 70px;
-        }
-
-        .error__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .error__content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-
-        .error__message {
-            text-align: center;
-            color: #181828;
-        }
-
-        .message__title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 5.6rem;
-            padding-bottom: 40px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .message__text {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 42px;
-            font-size: 18px;
-            padding: 0 60px;
-            max-width: 680px;
-            margin: auto;
-        }
-
-        .error__nav {
-            max-width: 600px;
-            margin: 40px auto 0;
-            text-align: center;
-        }
-
-        .e-nav__form {
-            position: relative;
-            height: 45px;
-            overflow: hidden;
-            width: 170px;
-            display: inline-block;
-            vertical-align: top;
-            border: 1px solid #212121;
-            padding-left: 10px;
-            padding-right: 46px;
-        }
-
-        .e-nav__icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            color: #212121;
-            -webkit-transition: color .25s ease;
-            transition: color .25s ease;
-        }
-
-        .e-nav__link {
-            height: 45px;
-            line-height: 45px;
-            width: 170px;
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 15px;
-            border: 1px solid #181828;
-            color: #181828;
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: .1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .e-nav__link:before {
-            content: '';
-            height: 200px;
-            background: #212121;
-            position: absolute;
-            top: 70px;
-            right: 70px;
-            width: 260px;
-            -webkit-transition: all .3s;
-            transition: all .3s;
-            -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
-        }
-
-        .e-nav__link:after {
-            -webkit-transition: all .3s;
-            transition: all .3s;
-            z-index: 999;
-            position: relative;
-        }
-
-        .e-nav__link:after {
-            content: "Entre em contacto";
-        }
-
-        .e-nav__link:hover:before {
-            top: -60px;
-            right: -50px;
-        }
-
-        .e-nav__link:hover {
-            color: #fff;
-        }
-
-        .e-nav__link:nth-child(2):hover:after {
-            color: #fff;
-        }
-
-        /* 2.1. FIM Section Error */
-
-        /* 2.2. Social style */
-        .error__social {
-            position: absolute;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            left: 20px;
-            z-index: 10;
-        }
-
-        .e-social__list {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .e-social__icon {
-            padding-bottom: 30px;
-        }
-
-        .e-social__icon:last-child {
-            padding-bottom: 0;
-        }
-
-        .e-social__link {
-            color: #fff;
-            -webkit-transition: all .25s ease;
-            transition: all .25s ease;
-            display: block;
-        }
-
-        .e-social__link:hover {
-            opacity: .7;
-        }
-
-        /* 2.2. FIM Social style */
-
-        /* 2.3. Lamp */
-        .lamp {
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            top: 0px;
-            margin: 0px auto;
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform-origin: center top;
-            animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
-            animation: move 5.1s infinite;
-        }
-
-        @keyframes move {
-            0% {
-                transform: rotate(40deg);
-            }
-
-            50% {
-                transform: rotate(-40deg);
-            }
-
-            100% {
-                transform: rotate(40deg);
-            }
-        }
-
-        .cable {
-            width: 8px;
-            height: 248px;
-            background-image: linear-gradient(rgb(32 148 218 / 70%), rgb(193 65 25)), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-        }
-
-        .cover {
-            width: 200px;
-            height: 80px;
-            background: #0bd5e8;
-            border-top-left-radius: 50%;
-            border-top-right-radius: 50%;
-            position: relative;
-            z-index: 200;
-        }
-
-        .in-cover {
-            width: 100%;
-            max-width: 200px;
-            height: 20px;
-            border-radius: 100%;
-            background: #08ffff;
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            margin: 0px auto;
-            bottom: -9px;
-            z-index: 100;
-        }
-
-        .in-cover .bulb {
-            width: 50px;
-            height: 50px;
-            background-color: #08fffa;
-            border-radius: 50%;
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            bottom: -20px;
-            margin: 0px auto;
-            -webkit-box-shadow: 0 0 15px 7px rgba(0, 255, 255, 0.8), 0 0 40px 25px rgba(0, 255, 255, 0.5), -75px 0 30px 15px rgba(0, 255, 255, 0.2);
-            box-shadow: 0 0 25px 7px rgb(127 255 255 / 80%), 0 0 64px 47px rgba(0, 255, 255, 0.5), 0px 0 30px 15px rgba(0, 255, 255, 0.2);
-        }
-
-
-        .light {
-            width: 200px;
-            height: 0px;
-            border-bottom: 900px solid rgb(44 255 255 / 24%);
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            top: 270px;
-            margin: 0px auto;
-            z-index: 1;
-            border-radius: 90px 90px 0px 0px;
-        }
-
-        /* 2.3. FIM Lamp */
-        /***********************************
-			/* 2. FIM CONTENT */
-        /***********************************/
-
-        /***********************************
-			/* 3. RESPONSIVE */
-        /***********************************/
-        .error {
-            overflow: hidden;
-            max-height: 100vh;
-        }
-
-        @media (max-width: 1400px) {
-            .lamp {
-                zoom: .5;
-            }
-
-            .error__content {
-                top: 55%;
-            }
-
-            .message__title {
-                font-size: 3.5rem;
-            }
-        }
-
-        @media (max-width: 900px) {
-
-            .message__title {
-                font-size: 34px;
-
-            }
-
-            .error__content {
-                top: 55%;
-            }
-        }
-
-        @media (max-width: 950px) {
-            .lamp__wrap {
-                max-height: 100vh;
-                overflow: hidden;
-                max-width: 100vw;
-            }
-
-            .error__social {
-                bottom: 30px;
-                top: auto;
-                transform: none;
-                width: 100%;
-                position: fixed;
-                left: 0;
-            }
-
-            .e-social__icon {
-                display: inline-block;
-                padding-right: 30px;
-            }
-
-            .e-social__icon:last-child {
-                padding-right: 0;
-            }
-
-            .e-social__icon {
-                padding-bottom: 0;
-            }
-        }
-
-        @media (max-width: 750px) {
-
-            body,
-            html {
-                max-height: 100vh;
-            }
-
-            .error__content {
-                position: static;
-                margin: 0 auto;
-                transform: none;
-                padding-top: 300px;
-            }
-
-            .error {
-                padding-top: 0;
-                padding-bottom: 100px;
-                height: 100vh;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .message__title {
-                font-size: 36px;
-                padding-bottom: 20px;
-            }
-
-            .message__text {
-                font-size: 16px;
-                line-height: 2;
-                padding-right: 20px;
-                padding-left: 20px;
-            }
-
-            .lamp {
-                zoom: .6;
-            }
-
-            .error__content {
-                padding-top: 180px;
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .message__title {
-                font-size: 30px;
-            }
-
-            .message__text {
-                padding-left: 10px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-
-            .error__nav {
-                margin-top: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elton Macuacácua</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <a href="#">
-        <header class="top-header">
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/me.jpg" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Elton Macuacácua</h1>
+
+          <p class="title">Engenheiro de software</p>
+          <p class="title">Designer Gráfico</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contactos</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:eltonmacuacua.cv@gmail.com" class="contact-link">eltonmacuacua.cv@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Telefone | WhatsApp</p>
+
+              <a href="tel:+258870313175" class="contact-link">+258 870 3131 75</a>
+              <a href="tel:+258846545707" class="contact-link">+258 84 6545 707</a>
+
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Data de Nascimento</p>
+
+              <time datetime="1982-06-23">27/07/1999</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Localização</p>
+
+              <address>Maputo, Moçambique</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/heltonvictor.macuacua/" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://x.com/i/flow/elton_macuacua0" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/perceu.dev/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>Sobre</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Currículo</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfólio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contacto</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="sobre">
+
+        <header>
+          <h2 class="h2 article-title">Sobre mim</h2>
         </header>
 
-        <!--dust particel-->
-        <div>
-            <div class="starsec"></div>
-            <div class="starthird"></div>
-            <div class="starfourth"></div>
-            <div class="starfifth"></div>
-        </div>
-        <!--Dust particle FIM--->
+        <section class="about-text">
+          <p>
+            Sou Engenheiro de Informática e Telecomunicações de Maputo, Moçambique, com experiência em desenvolvimento
+            de software, gestão de banco de dados e design gráfico. Gosto de transformar desafios técnicos em soluções
+            eficientes, funcionais e visualmente atraentes.
+          </p>
+
+          <p>
+            Meu trabalho é desenvolver sistemas e aplicações que não apenas atendam às necessidades técnicas, mas que
+            também sejam intuitivos e de fácil utilização para os usuários. Além disso, busco sempre incorporar um toque
+            criativo aos projectos, garantindo que sejam visualmente impactantes e alinhados com a identidade da marca.
+            Meu objectivo é criar soluções que transmitam a mensagem e os valores da empresa de forma clara e inovadora.
+          </p>
+        </section>
 
 
-        <div class="lamp__wrap">
-            <div class="lamp">
-                <div class="cable"></div>
-                <div class="cover"></div>
-                <div class="in-cover">
-                    <div class="bulb"></div>
-                </div>
-                <div class="light"></div>
-            </div>
-        </div>
-        <!-- FIM Lamp -->
-        <section class="error">
-            <!-- Content -->
-            <div class="error__content">
-                <div class="error__message message">
-                    <h1 class="message__title">Em manuntenção</h1>
-                    <p class="message__text">Sinto muito, estamos em manuntenção. <br> Volte em poucas horas. <br> OBRIGADO!</p>
-                </div>
-                <div class="error__nav e-nav">
-                    <a href="tel:+258870313175" target="_blanck" class="e-nav__link"></a>
-                </div>
-            </div>
-            <!-- FIM Content -->
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">O que venho fazendo</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Design Gráfico e UI/UX</h4>
+
+                <p class="service-item-text">
+                  Criação de designs intuitivos e visualmente atraentes para interfaces de usuário, combinando
+                  funcionalidade e estética para melhorar a experiência do usuário.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desenvolvimento Web</h4>
+
+                <p class="service-item-text">
+                  Construção de websites responsivos e modernos, com foco em usabilidade,
+                  desempenho e alinhamento com a identidade visual da marca.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icons8-database-48.png" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Gestão de Banco de Dados</h4>
+
+                <p class="service-item-text">
+                  Desenvolvimento, optimização e administração de bancos de dados relacionais,
+                  garantindo segurança, eficiência e integridade dos dados.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icons8-backend-development-48.png" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desenvolvimento de Software</h4>
+
+                <p class="service-item-text">
+                  Criação de soluções de software robustas e escaláveis, com foco em funcionalidade e desempenho,
+                  utilizando tecnologias modernas e boas práticas de programação.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
 
         </section>
 
-    </a>
 
-    <script>
+        <!--
+          - testimonials
+        -->
 
-    </script>
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testemunhos</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar/1.png" alt="Hilartino" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Hilartino</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    O Elton transformou nossa visão em realidade! O site que ele desenvolveu para nossa empresa não só é
+                    funcional, mas também incrivelmente moderno e fácil de usar. Recomendo seu trabalho a todos que
+                    buscam qualidade e profissionalismo.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar/2.png" alt="Ana Gove" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Rosália</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Trabalhar com o Elton foi uma experiência incrível. Ele não só resolveu nossos problemas técnicos
+                    rapidamente, mas também trouxe ideias criativas que melhoraram nosso sistema de recrutamento. Um
+                    profissional altamente capacitado e dedicado!
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar/3.png" alt="Luísa Massango" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Luísa Massango</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    O Elton é um verdadeiro especialista em banco de dados. Ele optimizou nosso sistema, tornando-o mais
+                    rápido e seguro. Sua atenção aos detalhes e compromisso com prazos são impressionantes.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar/4.png" alt="Edson" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Edson</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Adoramos o design gráfico que o Elton criou para nossa campanha de marketing. Ele captou
+                    perfeitamente a essência da nossa marca e entregou um trabalho de alta qualidade. Superou todas as
+                    nossas expectativas!
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">2024</time>
+
+              <div data-modal-text>
+                <p>
+
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <section class="clients">
+          <h3 class="h3 clients-title">Tecnologias que Domínio</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/184143/java.svg" alt="Java" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C#"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/452091/python.svg" alt="Python" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/373717/jsp.svg" alt="JSP" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/374112/swift.svg" alt="Swift" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="SQL Server"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/354200/postgresql.svg" alt="PostgreSQL" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg" alt="MySQL" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/424906/logo-google-android-studio.svg" alt="Android Studio"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/305987/eclipseide.svg" alt="Eclipse IDE" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/354522/visual-studio-code.svg" alt="Visual Studio Code"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Apache_NetBeans_Logo.svg"
+                  alt="NetBeans IDE" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/354237/pycharm.svg" alt="PyCharm IDE" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/353906/intellij-idea.svg" alt="IntelliJ IDEA" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/354479/typescript.svg" alt="TypeScript" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/355190/reactjs.svg" alt="React JS" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.svgrepo.com/show/354568/woocommerce.svg" alt="WooCommerce" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/WordPress_logo.svg" alt="WordPress"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Joomla_Logo.svg" alt="Joomla"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Flutter_logo.svg" alt="Flutter"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Bootstrap_logo.svg" alt="Bootstrap"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Laravel_logo.svg" alt="Laravel"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Wix_logo.svg" alt="Wix" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/WAMP_logo.svg" alt="WAMP"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/XAMPP_logo.svg" alt="XAMPP"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Figma-logo.svg" alt="Figma"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Git-logo.svg" alt="Git" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Firebase_Logo.svg" alt="Firebase"
+                  class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Office_logo.svg"
+                  alt="Microsoft Office" class="tech-logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/WPS_Office_logo.svg" alt="WPS Office"
+                  class="tech-logo">
+              </a>
+            </li>
+
+          </ul>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #curriculo
+      -->
+
+      <article class="curriculo" data-page="currículo">
+
+        <header>
+          <h2 class="h2 article-title">Currículo</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Educação</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                Licenciatura em Engenharia Informática e Telecomunicações -
+                Instituto Superior de Transportes e Comunicação (ISUTC)
+              </h4>
+
+              <span>2018 — 2023</span>
+
+              <p class="timeline-text">
+                Formação sólida em desenvolvimento de software, gestão de redes e sistemas de telecomunicações,
+                com foco em soluções tecnológicas inovadoras e eficientes.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Curso de Inglês Básico - Instituto Dias Mãe de Mavalane</h4>
+
+              <span>2016</span>
+
+              <p class="timeline-text">
+                Aprimoramento das habilidades de comunicação em inglês, essencial para colaboração em projectos
+                internacionais e multidisciplinares.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Curso de Informática Básica - Instituto Dias Mãe de Mavalane</h4>
+
+              <span>2016</span>
+
+              <p class="timeline-text">
+                Introdução aos conceitos fundamentais de informática, preparando a base para o desenvolvimento de
+                habilidades técnicas avançadas.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Ensino Secundário - Escola Secundária Eduardo Mondlane</h4>
+
+              <span>2016 — 2017</span>
+
+              <p class="timeline-text">
+                Conclusão do ensino médio com foco em disciplinas técnicas e científicas, preparando o caminho para a
+                carreira em tecnologia.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experiência</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Técnico de TI & Designer Gráfico - Centavo Software, SA.</h4>
+
+              <span>Fevereiro de 2021 — Março de 2022</span>
+
+              <p class="timeline-text">
+                Responsável pela configuração de hardware, desenvolvimento de software e criação de designs gráficos.
+                Implementação de sistemas de vigilância (CCTV) e suporte técnico para usuários,
+                garantindo a eficiência e segurança dos sistemas. Participação em projectos significativos,
+                como a aplicação de credenciação do STAE e a instalação do sistema de gestão de portagens em Maputo.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Desenvolvedor de Software, Gestor de Banco de Dados, Designer Gráfico &
+                Gestor de Redes Sociais - Base Technology
+                SA.</h4>
+
+              <span>Junho de 2022 — Presente</span>
+
+              <p class="timeline-text">
+                Desenvolvimento de software, gestão e optimização de bancos de dados, e criação de layouts de
+                software e páginas web, gestão redes sociais e design gráfico.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Programador Back-end & Gestor de Banco de Dados - PIMINDER</h4>
+
+              <span>Dezembro de 2023 — Junho de 2024</span>
+
+              <p class="timeline-text">
+                Desenvolvimento e manutenção de infraestrutura back-end para aplicações web, implementação de APIs
+                RESTful e optimização de bancos de dados relacionais. Foco em soluções escaláveis e eficientes para
+                processamento de dados.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Minhas Habilidades</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Desenvolvimento de Software</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Gestão de Banco de Dados</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Design Gráfico e UI/UX</h5>
+                <data value="75">75%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Desenvolvimento Web</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Suporte Técnico e Redes</h5>
+                <data value="30">30%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 30%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Ferramentas de Programação</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfólio">
+
+        <header>
+          <h2 class="h2 article-title">Portfólio</h2>
+        </header>
+
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>Todos</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Software</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web Design</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Design Gráfico</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Selecionar categoria</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>Todos</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Software</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Web Design</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Design Gráfico</button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="design gráfico">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/design/1 (1).png" alt="Solução Criativa – Base Technology"
+                    loading="lazy">
+                </figure>
+                <h3 class="project-title">Solução Criativa – Base Technology</h3>
+                <p class="project-category">Adobe Photoshop</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="software">
+              <a href="http://credenciacao.centavo.co.mz/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/credenciacao.png" alt="Software" loading="lazy">
+                </figure>
+                <h3 class="project-title">Sistema credenciação</h3>
+                <p class="project-category">C# | {ASP.NET}</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/sitema-solar.png" alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">Sistema Solar</h3>
+                <p class="project-category">HTML | CSS | JS</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/relogio1.png" alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">Relógio digital e nalógico</h3>
+                <p class="project-category">HTML | CSS | Javascript</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/tesca.png " alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">TESCA Restaurant</h3>
+                <p class="project-category">{Wordpress}</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="software">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/aluger-carro.png" alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">Aluger de carro</h3>
+                <p class="project-category">HTML | css | PHP | JS | JQuery | MySQL</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/ginasio.png" alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">Ginásio</h3>
+                <p class="project-category">HTML | Javascript | CSS | Bootstrap | Firebase</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/figma 1.png" alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">E-commerce</h3>
+                <p class="project-category">Figma</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="design gráfico">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/design/1 (2).png" alt="Câmera de Segurança IDS – Desconto de 40%"
+                    loading="lazy">
+                </figure>
+                <h3 class="project-title">Câmera de Segurança IDS – Desconto de 40%</h3>
+                <p class="project-category">Adobe Photoshop</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="design gráfico">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/design/1 (4).png" alt="Black Friday – Universal Lda"
+                    loading="lazy">
+                </figure>
+                <h3 class="project-title">Black Friday – PCP Universal Lda</h3>
+                <p class="project-category">Canva</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="design gráfico">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/design/1 (5).png"
+                    alt="Módulo GSM Centurion G-Ultra – Promoção de 40%" loading="lazy">
+                </figure>
+                <h3 class="project-title">Módulo GSM Centurion G-Ultra – Promoção de 40%</h3>
+                <p class="project-category">Adobe Photoshop</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="design gráfico">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/design/1 (6).png" alt="Proteja o que mais importa – Universal Lda"
+                    loading="lazy">
+                </figure>
+                <h3 class="project-title">Proteja o que mais importa – Universal Lda</h3>
+                <p class="project-category">Illustrator</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="design gráfico">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/design/1 (7).png" alt="Qualidade – Agricultura Sustentável"
+                    loading="lazy">
+                </figure>
+                <h3 class="project-title">Qualidade – Agricultura Sustentável</h3>
+                <p class="project-category">Canva</p>
+              </a>
+            </li>
+            
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/menu-responsivo.png " alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">Menú responsivo</h3>
+                <p class="project-category">HTML | CSS | JS {Bootstrap}</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/portfolio/Foodi.png " alt="Web Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">Foodi - website de restaurante</h3>
+                <p class="project-category">Figma</p>
+              </a>
+            </li>
+
+          </ul>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Jan 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">O Web Design acabou?</h3>
+
+                  <p class="blog-text">
+                    A IA ainda não consegue projetar. Perdemos de qualquer forma.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Jan 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Seções de heróis que realmente convertem</h3>
+
+                  <p class="blog-text">
+                    Você nunca mais verá um site da mesma forma depois disso.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fev 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Resolvi o maior problema da internet</h3>
+
+                  <p class="blog-text">
+                    Corrigindo o processo de banners de cookies e as melhores práticas de Web Design
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fev 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Meu segredo para um Layout perfeito revelado</h3>
+
+                  <p class="blog-text">
+                    Criei centenas de sites com este único projeto!
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contacto">
+
+        <header>
+          <h2 class="h2 article-title">Contacto</h2>
+        </header>
+
+        <section class="contact-info">
+
+          <div class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Telefone | WhatsApp</p>
+              <a href="tel:+258870313175" class="contact-link">+258 870 3131 75</a>
+              <a href="https://wa.me/258870313175" class="contact-link" target="_blank">
+                <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp
+              </a>
+              <a href="tel:+258846545707" class="contact-link">+258 84 6545 707</a>
+              <a href="https://wa.me/258846545707" class="contact-link" target="_blank">
+                <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:eltonmacuacua.cv@gmail.com" class="contact-link">eltonmacuacua.cv@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Localização</p>
+              <address>Maputo, Moçambique</address>
+            </div>
+          </div>
+
+          <div class="social-list">
+            <p class="contact-title">Redes Sociais</p>
+            <ul class="social-list">
+              <li class="social-item">
+                <a href="https://www.facebook.com/heltonvictor.macuacua/" class="social-link" target="_blank">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="https://x.com/i/flow/elton_macuacua0" class="social-link" target="_blank">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="https://www.instagram.com/perceu.dev/" class="social-link" target="_blank">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="https://www.linkedin.com/in/elton-macu%C3%A1cua-75a54422a/" class="social-link"
+                  target="_blank">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
