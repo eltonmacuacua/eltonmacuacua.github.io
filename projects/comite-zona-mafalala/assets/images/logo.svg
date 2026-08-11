@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo do Comitê de Zona de Mafalala</title>
+  <desc id="desc">Símbolo gráfico com casas, pessoas e um sol, representando comunidade e proximidade.</desc>
+  <rect width="120" height="120" rx="30" fill="#173F35"/>
+  <circle cx="86" cy="31" r="12" fill="#F0B94E"/>
+  <path d="M20 67 39 50l19 17 20-23 22 23v26H20Z" fill="#F7F1E6"/>
+  <path d="M29 67v26h20V67l-10-9-10 9Zm35 0v26h26V67L77 52 64 67Z" fill="#D86D4B"/>
+  <circle cx="39" cy="73" r="4" fill="#173F35"/>
+  <circle cx="77" cy="73" r="4" fill="#173F35"/>
+  <path d="M39 79c-7 0-11 5-11 11h22c0-6-4-11-11-11Zm38 0c-7 0-11 5-11 11h22c0-6-4-11-11-11Z" fill="#173F35"/>
+  <path d="M18 97h84" stroke="#F0B94E" stroke-width="5" stroke-linecap="round"/>
+</svg>
