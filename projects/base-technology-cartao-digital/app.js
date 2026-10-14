@@ -1,0 +1,14 @@
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function activate(tab){tabs.forEach(t=>{const selected=t===tab;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!selected;});}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>activate(t));t.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(e.key==='Home')n=0;if(e.key==='End')n=tabs.length-1;if(n!==undefined){e.preventDefault();activate(tabs[n]);tabs[n].focus();}});});
+const shareDialog=document.getElementById('share-dialog'),field=document.getElementById('share-url'),toast=document.getElementById('toast');let timer;
+function message(text){toast.textContent=text;toast.classList.add('visible');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('visible'),4000);}
+const cardURL=location.protocol==='file:'?'https://basety-cartao-digital.lets-play.chatgpt.site':location.origin+location.pathname;
+async function share(){if(navigator.share){try{await navigator.share({title:'Base Technology, S.A. | Cartão Digital',text:'Soluções tecnológicas integradas em Moçambique.',url:cardURL});return;}catch(e){if(e.name==='AbortError')return;}}field.value=cardURL;shareDialog.showModal();}
+document.getElementById('open-share').addEventListener('click',share);document.getElementById('footer-share').addEventListener('click',share);
+document.getElementById('copy-link').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(field.value);message('Link copiado.');shareDialog.close();}catch{field.focus();field.select();message('Seleccione e copie o endereço apresentado.');}});
+const quoteDialog=document.getElementById('quote-dialog'),form=document.getElementById('quote-form');['request-quote','contact-quote'].forEach(id=>document.getElementById(id).addEventListener('click',()=>quoteDialog.showModal()));
+function briefText(){const data=new FormData(form);return `Olá Base Technology,\n\nSou ${data.get('name').trim()}.\nGostaria de solicitar um orçamento para: ${data.get('service')}.\n\n${data.get('brief').trim()}\n\nObrigado.`;}
+form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;window.open('https://wa.me/258870558213?text='+encodeURIComponent(briefText()),'_blank','noopener,noreferrer');});
+document.getElementById('send-email').addEventListener('click',()=>{if(!form.reportValidity())return;location.href='mailto:info@basetechnology-mz.com?subject='+encodeURIComponent('Pedido de orçamento — '+new FormData(form).get('service'))+'&body='+encodeURIComponent(briefText());});
+document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}));

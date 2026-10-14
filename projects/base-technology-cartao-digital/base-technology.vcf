@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Base Technology;S.A.;;;
+FN:Base Technology, S.A.
+ORG:Base Technology, S.A.
+TEL;TYPE=WORK,VOICE:+258870558213
+EMAIL;TYPE=INTERNET,WORK:info@basetechnology-mz.com
+URL:https://basetechnology-mz.com/
+ADR;TYPE=WORK:;;Rua da Resistência;Maputo;;;Moçambique
+NOTE:Soluções tecnológicas: software, websites, redes, segurança e suporte técnico.
+END:VCARD
